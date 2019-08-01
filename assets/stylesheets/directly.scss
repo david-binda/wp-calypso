@@ -32,8 +32,9 @@
 //
 // QUIT AND RESTART YOUR BROWSER NORMALLY WHEN YOU'RE DONE MAKING LOCAL CSS CHANGES.
 
+@import '~@automattic/calypso-color-schemes/src/calypso-color-schemes';
+
 @import 'shared/mixins/mixins';
-@import '~@automattic/calypso-color-schemes/src/shared/colors';
 @import 'shared/extends-forms';
 @import 'shared/forms';
 @import 'shared/typography';
