@@ -37,17 +37,17 @@
 
 @include breakpoint( '<660px' ) {
 	li.sidebar__menu {
-		border-bottom: 1px solid var( --sidebar-border-color );
+		border-bottom: 1px solid var( --color-sidebar-border );
 
 		&:first-child {
-			border-top: 1px solid var( --sidebar-border-color );
+			border-top: 1px solid var( --color-sidebar-border );
 		}
 	}
 }
 
 // Sidebar group headings
 .sidebar__heading {
-	color: var( --sidebar-heading-color );
+	color: var( --color-sidebar-heading );
 	font-size: 14px;
 	font-weight: 600;
 	margin: 16px 8px 6px 16px;
@@ -62,14 +62,14 @@
 		display: flex;
 
 		@include breakpoint( '<660px' ) {
-			background-color: var( --sidebar-background );
+			background-color: var( --color-sidebar-background );
 
 			&.selected {
-				background-color: var( --sidebar-menu-selected-background-color );
+				background-color: var( --color-sidebar-menu-selected-background );
 			}
 
 			&.stats {
-				border-bottom: 1px solid var( --sidebar-border-color );
+				border-bottom: 1px solid var( --color-sidebar-border );
 			}
 		}
 	}
@@ -90,7 +90,7 @@
 			bottom: 0;
 			width: 15%;
 
-			background: overflow-gradient( var( --sidebar-menu-a-first-child-after-background ), 50% );
+			background: overflow-gradient( var( --color-sidebar-menu-a-first-child-after-background ), 50% );
 
 			@include breakpoint( '<660px' ) {
 				background: none;
@@ -103,7 +103,7 @@
 		line-height: 1;
 		position: relative;
 		padding: 11px 16px 11px 20px;
-		color: var( --sidebar-text-color );
+		color: var( --color-sidebar-text );
 		box-sizing: border-box;
 		white-space: nowrap;
 		overflow: hidden;
@@ -132,13 +132,13 @@
 			position: absolute;
 			right: 0;
 			z-index: z-index( 'icon-parent', '.sidebar__menu .gridicon.gridicons-external' );
-			color: var( --sidebar-menu-link-secondary-text-color );
+			color: var( --color-sidebar-menu-link-secondary-text );
 		}
 	}
 
 	.gridicon,
 	svg {
-		fill: var( --sidebar-gridicon-fill );
+		fill: var( --color-sidebar-gridicon-fill );
 		height: 24px;
 		width: 24px;
 		margin-right: 11px;
@@ -167,7 +167,7 @@
 		}
 
 		.sidebar__heading {
-			color: var( --sidebar-text-color );
+			color: var( --color-sidebar-text );
 			cursor: pointer;
 			font-weight: normal;
 			margin: 0;
@@ -175,7 +175,7 @@
 			transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
 			.gridicon {
-				fill: var( --sidebar-gridicon-fill );
+				fill: var( --color-sidebar-gridicon-fill );
 				position: relative;
 				top: 2px;
 				height: 18px; // Smaller than recommended for gridicon, but works here
@@ -183,8 +183,8 @@
 			}
 
 			.count {
-				color: var( --sidebar-text-color );
-				border-color: var( --sidebar-text-color );
+				color: var( --color-sidebar-text );
+				border-color: var( --color-sidebar-text );
 				font-size: 13px;
 				padding: 2px 7px 2px 6px;
 				margin-left: 8px;
@@ -204,12 +204,12 @@
 
 		&.is-togglable:not( .is-toggle-open ) {
 			.sidebar__heading:hover {
-				color: var( --sidebar-menu-hover-color );
-				background-color: var( --sidebar-menu-hover-background );
+				color: var( --color-sidebar-menu-hover );
+				background-color: var( --color-sidebar-menu-hover-background );
 
 				.gridicon,
 				.material-icon {
-					fill: var( --sidebar-menu-hover-color );
+					fill: var( --color-sidebar-menu-hover );
 				}
 			}
 		}
@@ -237,7 +237,7 @@
 
 		&.is-toggle-open {
 			.sidebar__heading {
-				background-color: var( --sidebar-menu-hover-background );
+				background-color: var( --color-sidebar-menu-hover-background );
 
 				.gridicon {
 					transform: rotate( 180deg );
@@ -251,7 +251,7 @@
 				transform: translateX( 0 );
 
 				&:hover {
-					border-color: var( --sidebar-menu-hover-color );
+					border-color: var( --color-sidebar-menu-hover );
 					color: var( --color-accent );
 				}
 			}
@@ -323,16 +323,16 @@ form.sidebar__button {
 	height: 24px;
 	margin-right: 8px;
 	line-height: 18px;
-	background-color: var( --sidebar-background-color );
-	color: var( --sidebar-text-color );
+	background-color: var( --color-sidebar-background-color );
+	color: var( --color-sidebar-text );
 	font-size: 12px;
 	font-weight: 600;
 	border-radius: 3px;
-	border: 1px solid var( --sidebar-border-color );
+	border: 1px solid var( --color-sidebar-border );
 
 	&:hover {
-		border-color: var( --sidebar-text-color );
-		color: var( --sidebar-text-color );
+		border-color: var( --color-sidebar-text );
+		color: var( --color-sidebar-text );
 	}
 
 	@include breakpoint( '<660px' ) {
@@ -356,10 +356,10 @@ form.sidebar__button input {
 
 // Selected Menu
 .sidebar__menu .selected {
-	background-color: var( --sidebar-menu-selected-background-color );
+	background-color: var( --color-sidebar-menu-selected-background );
 
 	a {
-		color: var( --sidebar-menu-selected-a-color );
+		color: var( --color-sidebar-menu-selected-a );
 
 		.sidebar__menu-link-secondary-text {
 			color: inherit;
@@ -367,34 +367,34 @@ form.sidebar__button input {
 
 		&:first-child::after {
 			background: overflow-gradient(
-				var( --sidebar-menu-selected-a-first-child-after-background ),
+				var( --color-sidebar-menu-selected-a-first-child-after-background ),
 				50%
 			);
 		}
 	}
 
 	.sidebar__button {
-		color: var( --sidebar-menu-selected-a-color );
-		border-color: var( --sidebar-menu-selected-a-color );
+		color: var( --color-sidebar-menu-selected-a );
+		border-color: var( --color-sidebar-menu-selected-a );
 
 		&:hover {
-			color: var( --sidebar-menu-selected-a-color );
-			border-color: var( --sidebar-menu-selected-a-color );
+			color: var( --color-sidebar-menu-selected-a );
+			border-color: var( --color-sidebar-menu-selected-a );
 		}
 	}
 
 	.gridicon,
 	.jetpack-logo,
 	.material-icon {
-		fill: var( --sidebar-menu-selected-a-color );
+		fill: var( --color-sidebar-menu-selected-a );
 	}
 
 	&.is-action-button-selected a {
 		&:first-child::after {
 			background: linear-gradient(
 				to right,
-				rgba( var( --sidebar-menu-selected-a-first-child-after-background ), 0 ),
-				rgba( var( --sidebar-menu-selected-a-first-child-after-background ), 1 ) 50%
+				rgba( var( --color-sidebar-menu-selected-a-first-child-after-background ), 0 ),
+				rgba( var( --color-sidebar-menu-selected-a-first-child-after-background ), 1 ) 50%
 			);
 		}
 	}
@@ -403,64 +403,64 @@ form.sidebar__button input {
 // Menu Hover
 .notouch .sidebar__menu li:hover {
 	&:not( .selected ) {
-		background-color: var( --sidebar-menu-hover-background );
+		background-color: var( --color-sidebar-menu-hover-background );
 
 		a,
 		form {
 			&:first-child::after {
-				background: overflow-gradient( var( --sidebar-menu-hover-background-gradient ), 50% );
+				background: overflow-gradient( var( --color-sidebar-menu-hover-background-gradient ), 50% );
 			}
 
 			&.sidebar__button {
-				border-color: var( --sidebar-text-color );
-				background-color: var( --sidebar-background-color );
-				color: var( --sidebar-text-color );
+				border-color: var( --color-sidebar-text );
+				background-color: var( --color-sidebar-background-color );
+				color: var( --color-sidebar-text );
 
 				&:hover {
-					border-color: var( --sidebar-text-color );
-					color: var( --sidebar-text-color );
+					border-color: var( --color-sidebar-text );
+					color: var( --color-sidebar-text );
 				}
 			}
 		}
 
 		& > a {
-			color: var( --sidebar-menu-hover-color );
+			color: var( --color-sidebar-menu-hover );
 
 			& > .gridicon,
 			& > .jetpack-logo {
-				fill: var( --sidebar-menu-hover-color );
+				fill: var( --color-sidebar-menu-hover );
 			}
 		}
 	}
 
 	@include breakpoint( '<660px' ) {
-		background-color: var( --sidebar-menu-hover-background );
+		background-color: var( --color-sidebar-menu-hover-background );
 
 		a,
 		form {
-			color: var( --sidebar-text-color );
+			color: var( --color-sidebar-text );
 
 			&:first-child::after {
 				background: linear-gradient(
 					to right,
-					rgba( var( --sidebar-menu-hover-background-gradient ), 0 ),
-					rgba( var( --sidebar-menu-hover-background-gradient ), 1 ) 50%
+					rgba( var( --color-sidebar-menu-hover-background-gradient ), 0 ),
+					rgba( var( --color-sidebar-menu-hover-background-gradient ), 1 ) 50%
 				);
 			}
 
 			&.sidebar__button {
-				background-color: var( --sidebar-background-color );
-				color: var( --sidebar-text-color );
+				background-color: var( --color-sidebar-background-color );
+				color: var( --color-sidebar-text );
 
 				&:hover {
-					border-color: var( --sidebar-text-color );
-					color: var( --sidebar-text-color );
+					border-color: var( --color-sidebar-text );
+					color: var( --color-sidebar-text );
 				}
 			}
 		}
 
 		.gridicon {
-			fill: var( --sidebar-gridicon-fill );
+			fill: var( --color-sidebar-gridicon-fill );
 		}
 	}
 }
@@ -468,10 +468,10 @@ form.sidebar__button input {
 .is-group-sites .notouch li.sidebar__menu:hover {
 	&:not( .selected ) {
 		& > h2 {
-			color: var( --sidebar-menu-hover-color );
+			color: var( --color-sidebar-menu-hover );
 
 			& > .material-icon {
-				fill: var( --sidebar-menu-hover-color );
+				fill: var( --color-sidebar-menu-hover );
 			}
 		}
 	}
@@ -481,14 +481,14 @@ form.sidebar__button input {
 	a,
 	form {
 		&.sidebar__button:hover {
-			color: var( --sidebar-text-color );
-			border-color: var( --sidebar-text-color );
+			color: var( --color-sidebar-text );
+			border-color: var( --color-sidebar-text );
 		}
 	}
 
 	a:hover,
 	form:hover {
-		color: var( --sidebar-menu-hover-color );
+		color: var( --color-sidebar-menu-hover );
 
 		.sidebar__menu-link-secondary-text {
 			color: inherit;
@@ -497,19 +497,19 @@ form.sidebar__button input {
 		.gridicon,
 		.jetpack-logo,
 		.material-icon {
-			fill: var( --sidebar-menu-hover-color );
+			fill: var( --color-sidebar-menu-hover );
 		}
 	}
 }
 
 .sidebar .sidebar__separator {
-	border-bottom: 1px solid var( --sidebar-border-color );
+	border-bottom: 1px solid var( --color-sidebar-border );
 }
 
 .sidebar .sidebar__footer {
 	align-items: center;
 	padding: 0;
-	border-top: 1px solid var( --sidebar-border-color );
+	border-top: 1px solid var( --color-sidebar-border );
 	margin: auto 0 0;
 	display: flex;
 	flex-direction: row;
@@ -524,7 +524,7 @@ form.sidebar__button input {
 	font-size: 11px;
 	font-weight: 600;
 	padding: 8px;
-	color: var( --sidebar-heading-color );
+	color: var( --color-sidebar-heading );
 	line-height: 2.1;
 	margin-right: auto;
 
@@ -537,7 +537,7 @@ form.sidebar__button input {
 	}
 
 	&:hover {
-		color: var( --sidebar-text-color );
+		color: var( --color-sidebar-text );
 	}
 
 	@include breakpoint( '<660px' ) {
@@ -646,7 +646,7 @@ form.sidebar__button input {
 		}
 
 		.selected svg {
-			fill: var( --sidebar-menu-selected-a-color );
+			fill: var( --color-sidebar-menu-selected-a );
 		}
 
 		&.is-togglable {
@@ -721,7 +721,7 @@ form.sidebar__button input {
 	}
 
 	.sidebar__menu.sidebar__wp-admin .wp-admin {
-		border-top: 1px solid var( --sidebar-border-color );
+		border-top: 1px solid var( --color-sidebar-border );
 		justify-content: flex-start;
 
 		@include breakpoint( '<660px' ) {
