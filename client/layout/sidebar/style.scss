@@ -121,7 +121,7 @@
 			}
 		}
 
-		-webkit-tap-highlight-color: rgba( var( --color-neutral-700-rgb ), 0.2 );
+		-webkit-tap-highlight-color: rgba( var( --color-neutral-70-rgb ), 0.2 );
 
 		.sidebar__menu-link-secondary-text {
 			padding: 4px 8px;
@@ -268,8 +268,8 @@
 				transform: translateY( 0 );
 
 				.add-new {
-					background: var( --color-white );
-					border: 1px solid var( --color-neutral-100 );
+					background: var( --studio-white );
+					border: 1px solid var( --color-neutral-10 );
 					border-radius: 3px;
 					font-size: 11px;
 					padding: 6px 7px;
@@ -532,7 +532,7 @@ form.sidebar__button input {
 		background: var( --color-primary );
 
 		.gridicon {
-			fill: var( --color-white );
+			fill: var( --studio-white );
 		}
 	}
 
@@ -605,7 +605,7 @@ form.sidebar__button input {
 		span,
 		.sidebar__button {
 			animation: loading-fade 1.6s ease-in-out infinite;
-			background-color: var( --color-neutral-50 );
+			background-color: var( --color-neutral-5 );
 			color: transparent;
 		}
 
