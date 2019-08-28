@@ -133,7 +133,7 @@ class PageTemplateModal extends Component {
 								templates={ this.props.templates }
 								blocksByTemplates={ this.state.blocks }
 								onTemplateSelect={ this.previewTemplate }
-								useDynamicPreview={ false }
+								useDynamicPreview={ true }
 								siteInformation={ siteInformation }
 							/>
 						</fieldset>
