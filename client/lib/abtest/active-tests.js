@@ -170,4 +170,13 @@ export default {
 		defaultVariation: 'hide',
 		assignmentMethod: 'userId',
 	},
+	checkoutAlwaysPhoneNumber: {
+		datestamp: '20190829',
+		variations: {
+			variant: 50,
+			control: 50,
+		},
+		defaultVariation: 'control',
+		allowExistingUsers: true,
+	},
 };
