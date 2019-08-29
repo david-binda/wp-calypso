@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useState, useEffect, useRef } from 'react';
-import { camelCase, kebabCase, debounce } from 'lodash';
+import { useState, useEffect } from 'react';
+import { camelCase, kebabCase } from 'lodash';
 
 /**
  * Internal dependencies
@@ -139,8 +139,14 @@ export function getParamsForApi( cardDetails, cardToken, stripeConfiguration, ex
 
 export function useDebounce( value, delay ) {
 	const [ debouncedValue, setDebouncedValue ] = useState( value );
-	const debounced = useRef( debounce( newValue => setDebouncedValue( newValue ), delay ) );
-	useEffect( () => debounced.current( value ), [ value ] );
+	useEffect( () => {
+		const timeout = setTimeout( () => {
+			setDebouncedValue( value );
+		}, delay );
+		return () => {
+			clearTimeout( timeout );
+		};
+	}, [ value, delay ] );
 	return [ debouncedValue, setDebouncedValue ];
 }
 
