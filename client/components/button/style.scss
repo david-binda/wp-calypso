@@ -142,7 +142,7 @@ button {
 
 	&:hover,
 	&:focus {
-		background-color: var( --color-button-primary-background-hover );
+		background-color: var( --color-accent-60 );
 		border-color: var( --color-accent-dark );
 		color: var( --studio-white );
 	}
@@ -180,7 +180,7 @@ button {
 
 	&:hover,
 	&:focus {
-		border-color: var( --color-error );
+		border-color: var( --color-error-40 );
 	}
 
 	.accessible-focus &:focus {
@@ -202,7 +202,7 @@ button {
 
 	&:hover,
 	&:focus {
-		background-color: var( --color-button-primary-scary-background-hover );
+		background-color: var( --color-error-60 );
 	}
 
 	&[disabled],
